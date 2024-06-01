@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    border: 1px solid #333;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 30px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    z-index: 1000;
+}
+
+.container {
+    border: 1px solid #fff;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 50px;
+    margin-top: 70px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    overflow: hidden; /* Ocultar el desbordamiento */
+}
+
+.left-column, .center-column, .right-column {
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding-top: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: 0;
+    overflow: hidden; /* Ocultar el desbordamiento */
+}
+
+.center-column {
+    flex-basis: 50%;
+}
+
+.section_ppal1, .section_ppal2, .section-footer {
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+
+#contenido_dinamico {
+ /* Opacidad */
+    opacity: 1; /* Opacidad completa */
+
+    /* Transición */
+    transition: opacity 0.5s ease; /* Transición suave de 0.5 segundos */
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 50px;
+        margin-top: 70px;
+    }
+
+    .center-column {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .left-column {
+        order: 2;
+        flex-basis: 100%;
+    }
+
+    .right-column {
+        order: 3;
+        flex-basis: 100%;
+    }
+}
